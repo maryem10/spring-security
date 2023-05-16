@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+<h1>Login</h1>
+<form th:action="@{/login}" method="post">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required><br><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org"-->
+<!--      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">-->
+<!--<head>-->
+<!--    <title>My App</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div sec:authorize="isAuthenticated()">-->
+<!--    <p>Welcome, <span sec:authentication="name">User</span>!</p>-->
+<!--    <form th:action="@{/logout}" method="post">-->
+<!--        <input type="submit" value="Log out"/>-->
+<!--    </form>-->
+<!--</div>-->
+<!--<div sec:authorize="!isAuthenticated()">-->
+<!--    <form th:action="@{/login}" method="post">-->
+<!--        <input type="text" name="username" placeholder="Username"/>-->
+<!--        <input type="password" name="password" placeholder="Password"/>-->
+<!--        <input type="submit" value="Log in"/>-->
+<!--    </form>-->
+<!--    <p th:if="${param.error}">-->
+<!--        Invalid username or password.-->
+<!--    </p>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
